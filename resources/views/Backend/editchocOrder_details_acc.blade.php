@@ -1,0 +1,142 @@
+@extends('Backend.layout.master_req')
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+
+@section('content')
+ 
+<style>
+
+/* .table>tbody>tr>td {
+
+padding: 8px;
+ line-height: 2;
+ text-align: center;
+ vertical-align: unset;
+ border: 1px solid black;
+ border-collapse: collapse;
+ background-color: rgba(250, 235, 215, 0.836);
+} */
+.table>tbody>tr>td{
+  color: #080808cc;
+  border: 1px solid black;
+ border-collapse: collapse;
+ border-top: 1px solid red;
+ font-size: 20px;
+}
+ .table>tbody>tr>th,
+ .table>tfoot>tr>td, .table>tfoot>tr>th
+   {
+  border: 1px solid black;
+ border-collapse: collapse;
+ border-top: 1px solid red;
+ font-size: 20px;
+ color: #2356b4cc;
+  }
+  .table>thead>tr>td, 
+  .table>thead>tr>th
+ {
+ background-color: #004f6169;
+ color: black;
+ font-size: 30px;
+
+} 
+/* .numeric{
+  border: 1px solid rgb(104, 48, 48);
+ border-collapse: collapse;
+ background: red;
+} */
+
+</style>
+ 
+<div class="content-panel "style="height:10%;"  >
+  <div class="row">
+        <h2 style="text-align: center;  col-lg-2  col-sm-8 col-md-4 " ><i class="fa fa-dote-left th-left center"></i> طلب شراء مواد</h2>
+    </div>
+        
+        <hr>
+
+  <br>
+    </div>
+
+    {{-- @if(Session::has('success'))
+  <div class="alert alert-success">
+    {{Session::get('success')}}
+  </div>
+    @endif
+    @if(Session::has('Danger'))
+  <div class="alert alert-danger">
+    {{Session::get('Danger')}}
+  </div>
+    @endif
+    <hr style="border: none;"> --}}
+
+<div>
+ <div class="col-sm-12 col-md-12 col-lg-12"  >  
+<table class="table table-bordered table-striped table-condensed col-sm-3 col-md-2 col-lg-2"  >
+<thead>
+    <tr >
+      <th class="numeric " colspan="7" style="font-size: 25px;">    تفاصيل الطلب  </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    
+    <th class="numeric">   الكمية</th>   
+    <th class="numeric">   الجرد</th>   
+    <th class="numeric">   نوع الحشوة</th>
+    <th class="numeric">  اسم القالب</th>
+    <th class="numeric">   لون </th>
+    <th class="numeric">  لون الليبل </th>
+    
+    </tr>
+    @foreach($choclate_order as $mm)  
+    <tr style="text-align: center; font-size:15px;">
+      <form method="post" id="form-data" action="{{url('/editChoclateid')}}/{{$mm->id}}" enctype="multipart/form-data">
+        <input  type="hidden" name="_token" value ="{{ csrf_token() }}" />
+        @method('PUT')
+
+        <td class="input wid"  data-tituli="الكمية">
+          <input data-tituli="كمية:" type="number" name="order_count" value="{{$mm->order_count}}"  min="0" style="width: 70px;">
+          غ
+        </td>
+        <td class="input wid"  data-tituli="الجرد">
+          <input data-tituli="جرد:" type="number" name="jrd_count" value="{{$mm->jrd_count}}"  min="0" style="width: 70px;">
+             غ
+        </td>
+        <td class="input wid" data-tituli="نوع الحشوة">  {{$mm->typeFilling}}</td>
+        {{-- <td class="input wid"name="choco_id" value="{{$choclate1->id}}">{{$choclate1->id}}</td> --}}
+        <td class="input wid" rowspan="1" data-tituli="اسم القالب"> {{$mm->choco_name}}</td>
+        <td class="input wid" data-tituli="لون">  {{$mm->color}}</td>  
+        <td class="input wid" data-tituli="لون الليبل">  {{$mm->label}}</td>
+  
+      </tr>
+    @endforeach       
+      </tbody>
+
+</table>  
+{{-- <hr class="w-100 branch"> --}}
+{{-- @role('admin')
+<input type="submit"   class="btn btn-default col-lg-6"  value="تعديل الطلب"   style="background: #a3eaffcc; font-size: 20px"> 
+@endrole --}}
+<input type="submit"   class="btn btn-default col-lg-12"  value="تعديل الطلب" style="font-size: 20px; background: #a3eaffcc; "> 
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+      
+      <!-- /content-panel -->
+    </div>
+    <!-- /col-lg-4 -->
+</div>
+
+
+{{-- </form> --}}
+        
+  </section>            
+</section>            
+ 
+  @endsection

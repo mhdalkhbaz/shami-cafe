@@ -1,0 +1,282 @@
+/* 
+html{
+  background-color: brown;
+} */
+ 
+ /* *{
+   margin: 0px;
+   padding: 0px;
+ } */
+body{
+   padding-top: 100px;
+  direction:rtl
+}
+h2{
+  text-align: center;
+  color: rgb(14, 11, 11);
+}
+
+
+  td {
+    font-weight: bold;
+   font-size: 15px;
+    text-align: center;
+
+  
+  } 
+  th {
+    color: rgb(7, 7, 6);
+    background-color: rgba(124, 112, 9, 0.808);
+    font-size: 20px;
+
+  
+  }
+
+  .table>tbody>tr>td {
+
+      padding:1px;
+      line-height: 0;
+      vertical-align: unset;
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: auto;
+
+    }
+
+    .choc{
+      margin-left:50px;
+      margin-right:50px;
+
+    }
+.input3 {
+      text-align: center;
+  
+ 
+    }
+ .input3 input{
+      margin-left : 5px;
+      
+    }
+
+  .container-form{
+    margin-left:  50px;
+    margin-right:  50px;
+   
+  }
+  
+  .numeric{
+    text-align:center;
+    border: 1px solid;
+    padding: 0px;
+    width: auto;
+  }
+
+  .btn{
+    color: rgb(7, 7, 6);
+    background-color: rgba(124, 112, 9, 0.808);
+     margin-bottom: 60px; 
+    
+     font-size: 20px;
+  }
+  
+  /* .branch{
+    padding-right: 40px;
+    padding-left: 40px;
+  
+  }
+  .branch h4   {
+    width: 310px;
+    border: 1px solid rgba(124, 112, 9, 0.808);
+    border-radius: 5px;
+   padding: 5px;
+   font-size: 20px;
+   color: white;
+    } */
+
+.navbar-inverse .navbar-nav >.active > a{
+  background-color: rgba(124, 112, 9, 0.808);
+}
+
+ .logou  a:hover {
+  color: black;
+}
+.info{
+  position: relative;
+     display: flex;
+    }
+
+.info {
+  display: flex;
+  width: 350px;
+  border: 1px solid rgba(124, 112, 9, 0.808);
+  border-radius: 5px;
+ padding: 5px;
+ font-size: 20px;
+ color: white;
+ margin: 10px;
+  }
+
+  .logout{ 
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: auto;
+   margin-left: 20px;
+   margin-top: 2px;
+   margin-bottom: 2px;
+    border: 1px solid rgba(124, 112, 9, 0.808);
+    border-radius: 5px;
+   font-size: 20px;
+   text-align: center;
+   color: white;
+
+   }   
+   .info .log a:hover{
+    background-color: rgba(124, 112, 9, 0.808);
+    color: white;
+  }
+
+   .logout h4{ 
+     float: left;
+     padding: 0px  6px  0px 6px;
+  
+   }
+
+   .count{
+   margin-right: 50px ;
+   }
+.choc .row .myorder {
+    /* border: 1px solid black; */
+    /* background-color: rgba(124, 112, 9, 0.808); */
+    padding: 10px;
+    /* border-radius: 5px; */
+    font-size: 20px;
+  margin-bottom: 1px;;
+    color: white;
+  }
+.choc .row .myorder a{
+  border: 1px solid black;
+  background-color: rgba(124, 112, 9, 0.808);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+}
+.choc .row .myorder  .back {
+  background:white;
+  border: 1px solid white;
+
+}
+.choc .row .myorder a:hover{
+  text-decoration: none;
+  color: rgb(7, 7, 7);
+}
+.w-100{
+    width: 100%;
+  }
+.center{
+      text-align: center;
+  }
+
+.form-title1  {
+    width: 300px;
+    /* background-color: rgb(0, 0, 0); */
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+     color: rgb(14, 10, 10);
+    padding: 10px 0px 10px 0px;
+     border-radius: 15px 15px 0px 0px;
+    
+    }
+.form-title {
+
+      width: 600px;
+      /* background-color: rgba(0, 0, 0, 0.767); */
+      text-align: center;
+      font-size: 25px;
+      margin: auto;
+      color: rgb(14, 11, 11);
+      padding: 10px 0px 10px 0px;
+      border-radius: 15px 15px 0px 0px;
+    }
+.navbar{
+  background:rgb(14, 11, 11);
+}
+.content-panel{
+      border-radius: 5px;
+      
+      color: rgb(255, 241, 241);
+      /* top: 0;
+
+      display: block;
+     
+      border: #4a3e3e;
+  
+      color: white;
+       */
+      /* margin-bottom: 130px; */
+    }
+.content-panel input {
+    margin: 0px 5px;
+    }
+
+    @media (max-width : 30em){
+      body{
+        
+        background-color: rgba(222, 223, 215, 0.856);
+        width: 100% ;
+        padding-top: 50px;
+      }
+      /* .choc{
+       margin: 100px;
+      } */
+
+
+      table{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+      table tr{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+      }
+      table thead{
+        display: none
+      }
+      table td[data-tituli]::before {
+        content: attr(data-tituli);
+        width: 80px;
+        color:rgb(226, 213, 216);
+        padding-left: 5px;
+        float: right;
+            }
+      .table>tbody>tr>td {
+        padding:8px;
+        line-height: 1;
+        vertical-align: unset;
+        border: 1px solid rgba(236, 214, 14, 0.288);
+        border-collapse: collapse;
+        width: auto;
+        background-color: #000000b6;
+       
+        color: rgb(243, 239, 239);
+
+      }
+
+  
+        h2{
+          color: rgba(0, 0, 0, 0.63)
+        }
+        .input input{
+          color: black;
+        }
+        .btn{
+          background: rgba(124, 113, 9, 0.534); 
+          margin-bottom: 60px; 
+          color: rgb(17, 16, 13);
+          font-size: 20px;
+        }
+            }
